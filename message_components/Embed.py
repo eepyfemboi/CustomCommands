@@ -15,6 +15,9 @@ from .Component import MessageComponent
 
 
 class EmbedComponent:
+    """
+    Base class for embed components such as author and footer
+    """
     def to_dict(self) -> Dict[str, str]:...
 
     @classmethod
@@ -36,6 +39,9 @@ class EmbedComponent:
         return repr(self.to_dict())
 
 class EmbedFooter(EmbedComponent):
+    """
+    The embed footer
+    """
     def __init__(self, icon_url: str = None, text: str = None) -> None:
         self.icon_url: str = icon_url
         self.text: str = text
@@ -54,6 +60,9 @@ class EmbedFooter(EmbedComponent):
         )
 
 class EmbedAuthor(EmbedComponent):
+    """
+    The embed author
+    """
     def __init__(self, icon_url: str = None, text: str = None, url: str = None) -> None:
         self.icon_url: str = icon_url
         self.text: str = text
@@ -75,6 +84,9 @@ class EmbedAuthor(EmbedComponent):
         )
 
 class Embed(MessageComponent):
+    """
+    Represents a custom embed
+    """
     def __init__(
                 self, 
                 title: str = '', 

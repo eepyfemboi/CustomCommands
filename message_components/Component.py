@@ -1,8 +1,8 @@
-from typing import *
+# CustomCommands.message_components.Component.py
+"""
+Base class for a custom message component
+"""
+from __future__ import annotations
 
-import discord
-from discord.ext import commands
 
-from ..formatter import formatter
-
-class MessageComponent:...
+class MessageComponent: ...
